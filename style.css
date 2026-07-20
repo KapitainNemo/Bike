@@ -89,7 +89,7 @@ a {
 
 .site-header {
 
-    position: absolute;
+    position: fixed;
 
     top: 0;
 
@@ -100,6 +100,24 @@ a {
     z-index: 20;
 
     padding: 2rem;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.35),
+        rgba(0,0,0,0)
+    );
+
+    pointer-events: none;
+
+}
+
+
+
+.site-header .logo {
+
+    pointer-events: auto;
+
+    cursor: pointer;
 
 }
 
@@ -141,6 +159,8 @@ a {
     height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
 
 }
 
@@ -319,6 +339,8 @@ a {
     height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
 
 }
 
@@ -626,6 +648,29 @@ a {
 .mtn-form {
 
     background: transparent !important;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
+
+.mtn-form .sib-form-container,
+.mtn-form #sib-form-container {
+
+    float: none !important;
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    text-align: center;
 
 }
 

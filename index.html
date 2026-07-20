@@ -5,14 +5,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Carry More. Go Further.</title>
+    <title data-i18n="page_title">Carry More. Go Further.</title>
 
-    <meta name="description" content="What we are building is an adventure cargo bike built for gravel roads, bikepacking, off-road exploration and nights outside.">
+    <meta name="description" data-i18n-attr="content:meta_description" content="What we are building is an adventure cargo bike built for gravel roads, bikepacking, off-road exploration and nights outside.">
 
     <meta name="keywords" content="cargo bike, adventure bike, gravel bike, bikepacking, off-road cycling">
 
-    <meta property="og:title" content="MtnCargo — Carry More. Go Further.">
-    <meta property="og:description" content="An adventure cargo bike built for gravel roads, wild places and nights outside.">
+    <meta property="og:title" data-i18n-attr="content:og_title" content="MtnCargo — Carry More. Go Further.">
+    <meta property="og:description" data-i18n-attr="content:og_description" content="An adventure cargo bike built for gravel roads, wild places and nights outside.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/image1.jpg">
 
@@ -29,12 +29,12 @@
 </head>
 
 
-<body>
+<body id="top">
 
 
 <header class="site-header">
 
-    <a href="/" class="logo">
+    <a href="#top" class="logo">
         <img src="logo.svg" alt="MtnCargo">
     </a>
 
@@ -59,19 +59,19 @@
 
     <div class="hero-content">
 
-        <h1>
+        <h1 data-i18n="hero_title">
             Carry More.<br>
             Go Further.
         </h1>
 
 
-        <p>
+        <p data-i18n="hero_text">
             We are building an adventure cargo bike built for gravel roads,
             wild places and nights outside.
         </p>
 
 
-        <a href="#join" class="button">
+        <a href="#join" class="button" data-i18n="hero_button">
             Join the first riders
         </a>
 
@@ -85,18 +85,18 @@
 
 <section class="text-section reveal">
 
-    <h2>
+    <h2 data-i18n="section1_title">
         Not another cargo bike.
     </h2>
 
 
-    <p>
+    <p data-i18n="section1_text1">
         There are bikes built for cities.
         And there are bikes built for adventure.
     </p>
 
 
-    <p>
+    <p data-i18n="section1_text2">
         MtnCargo was created for the space between them.
         For gravel tracks, forest roads, forgotten paths
         and weekends that turn into stories.
@@ -124,17 +124,17 @@
 
 <section class="text-section reveal">
 
-    <h2>
+    <h2 data-i18n="section2_title">
         Built for detours.
     </h2>
 
 
-    <p>
+    <p data-i18n="section2_text1">
         The best routes rarely appear on a map.
     </p>
 
 
-    <p>
+    <p data-i18n="section2_text2">
         Carry your gear.
         Follow the trail.
         Take the longer way home.
@@ -163,13 +163,13 @@
 
 <section class="quote-section reveal">
 
-    <blockquote>
+    <blockquote data-i18n="quote_text">
         "Some rides require less.
         Some require more."
     </blockquote>
 
 
-    <p>
+    <p data-i18n="quote_list">
         More water.
         More food.
         More camera gear.
@@ -200,20 +200,20 @@
 
 <section class="text-section reveal">
 
-    <h2>
+    <h2 data-i18n="section3_title">
         One night.<br>
         Two wheels.<br>
         Endless routes.
     </h2>
 
 
-    <p>
+    <p data-i18n="section3_text1">
         Inspired by gravel culture and bikepacking,
         MtnCargo is made for spontaneous escapes.
     </p>
 
 
-    <p>
+    <p data-i18n="section3_text2">
         Leave after work.
         Sleep somewhere new.
         Wake up somewhere better.
@@ -241,17 +241,15 @@
 
 <section class="text-section reveal">
 
-    <h2>
-        More than cargo.
+    <h2 data-i18n="section4_title">
+        More than cargo.<br>
+        More to come.
     </h2>
 
 
-    <p>
-        Gear.
-        Food.
-        Tools.
-        A tent.
-        Everything needed for the next adventure.
+    <p data-i18n="section4_text">
+        This is just the beginning.
+        Stay tuned for what's next.
     </p>
 
 
@@ -284,7 +282,7 @@
 
 
         <div id="error-message" class="sib-form-message-panel">
-            <div class="sib-form-message-panel__text">
+            <div class="sib-form-message-panel__text" data-i18n="form_error">
                 Deine Anmeldung konnte nicht gespeichert werden.
                 Bitte versuche es erneut.
             </div>
@@ -293,7 +291,7 @@
 
 
         <div id="success-message" class="sib-form-message-panel">
-            <div class="sib-form-message-panel__text">
+            <div class="sib-form-message-panel__text" data-i18n="form_success">
                 Willkommen bei MtnCargo.
                 Bitte bestätige deine E-Mail-Adresse.
             </div>
@@ -312,12 +310,12 @@
                   data-type="subscription">
 
 
-                <div class="mtn-form-title">
+                <div class="mtn-form-title" data-i18n="form_title">
                     Be among the first riders.
                 </div>
 
 
-                <div class="mtn-form-text">
+                <div class="mtn-form-text" data-i18n="form_text">
                     The MtnCargo journey is just beginning.
                     Join the list and follow the adventure.
                 </div>
@@ -333,7 +331,8 @@
 
                             <label class="entry__label"
                                    for="EMAIL"
-                                   data-required="*">
+                                   data-required="*"
+                                   data-i18n="form_email_label">
                                 Email
                             </label>
 
@@ -395,7 +394,8 @@
                             data-sitekey="0x4AAAAAAD5x0PiepTFjg2VS"
                             id="sib-captcha"
                             data-callback="handleCaptchaResponse"
-                            data-language="de">
+                            data-language="de"
+                            data-i18n-attr="data-language:captcha_lang">
                             </div>
 
 
@@ -415,7 +415,8 @@
                     <button
                     class="sib-form-block__button sib-form-block__button-with-loader"
                     form="sib-form"
-                    type="submit">
+                    type="submit"
+                    data-i18n="form_button">
 
                         JOIN THE RIDE
 
@@ -423,7 +424,7 @@
 
                 </div>
 
-                <div class="mtn-consent-note">
+                <div class="mtn-consent-note" data-i18n="form_consent">
                   Mit deiner Anmeldung stimmst du dem Erhalt von Informationen zum Launch zu.
                   Du kannst dich jederzeit abmelden.
                 </div>
@@ -439,7 +440,8 @@
                 <input
                 type="hidden"
                 name="locale"
-                value="de">
+                value="de"
+                data-i18n-value="form_locale">
 
 
             </form>
@@ -458,7 +460,7 @@
   <footer class="footer">
 
 
-    <p>
+    <p data-i18n="footer_text">
         Built for gravel.
         Designed for detours.
         Made to carry more than cargo.
@@ -471,11 +473,11 @@
             Instagram
         </a>
 
-        <a href="#">
+        <a href="#" data-i18n="footer_privacy">
             Privacy
         </a>
 
-        <a href="#">
+        <a href="#" data-i18n="footer_imprint">
             Imprint
         </a>
 
