@@ -159,7 +159,7 @@ function applyTranslations(lang) {
 }
 
 
-applyTranslations(detectLanguage());
+// applyTranslations(detectLanguage());
 
 
 
