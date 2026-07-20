@@ -388,41 +388,6 @@ a {
 
 
 
-.signup-inner {
-
-    max-width:700px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-
-
-.signup-inner h2 {
-
-    font-size:clamp(2.5rem,5vw,4rem);
-
-    line-height:1;
-
-    margin:0 0 2rem;
-
-    letter-spacing:-.04em;
-
-}
-
-
-
-.signup-inner p {
-
-    color:rgba(255,255,255,.7);
-
-    margin-bottom:4rem;
-
-}
-
-
 .mtn-consent-note {
 
     margin-top: 1.5rem;
@@ -734,6 +699,8 @@ a {
 
     margin-bottom:1.5rem;
 
+    text-align:center;
+
 }
 
 
@@ -743,6 +710,8 @@ a {
     color:rgba(255,255,255,.7);
 
     margin-bottom:3rem;
+
+    text-align:center;
 
 }
 
@@ -789,5 +758,7 @@ a {
     margin:0 auto 2rem !important;
 
     border-radius:20px !important;
+
+    text-align:center !important;
 
 }
