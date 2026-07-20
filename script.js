@@ -160,7 +160,7 @@ function applyTranslations(lang) {
 
 
 // applyTranslations(detectLanguage());
-
+applyTranslations("en");
 
 
 
