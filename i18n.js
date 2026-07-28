@@ -173,6 +173,11 @@ window.MtnI18n = (function () {
                 continue;
             }
 
+            if (/^(-{3,}|\*{3,}|_{3,})$/.test(block)) {
+                html += '<hr>';
+                continue;
+            }
+
             if (/^[-*]\s+/.test(block)) {
                 var items = block.split(/\r?\n/)
                     .filter(function (line) { return line.trim(); })
@@ -404,10 +409,18 @@ window.MtnI18n = (function () {
     }
 
     /* Sets up the switcher and renders a legal page from markdown. */
-    function initDocument(name, targetSelector) {
-        /* Start both requests immediately: the legal text itself and the
+    function initDocument(name, targetSelector, options) {
+        /* options.shared loads content/<name>.md instead of a per-language
+           file — used by the confirmation page, which shows both languages
+           at once because visitors arrive from an email link and may have
+           no stored language preference. */
+        var shared = !!(options && options.shared);
+
+        /* Start both requests immediately: the page text itself and the
            shared site texts used for navigation labels. */
-        var pendingDoc  = load(name);
+        var pendingDoc  = shared
+            ? loadText('content/' + name + '.md')
+            : load(name);
         var pendingSite = load('site').catch(function () { return null; });
 
         hideUntilReady();

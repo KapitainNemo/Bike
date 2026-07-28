@@ -534,9 +534,44 @@ a {
     color: var(--text);
 }
 
+.legal-content hr {
+    height: 0;
+    margin: 4rem 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .12);
+}
+
 .legal-back {
     margin-top: 4rem;
     font-size: .95rem;
+}
+
+
+/* ---------- Signup confirmation page ----------
+   Shows German and English one after the other, because visitors arrive
+   from an email link and may have no stored language preference.
+   -------------------------------------------------------------- */
+
+.legal--confirmed {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.legal--confirmed .legal-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.legal--confirmed .legal-content p {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+}
+
+.legal--confirmed .legal-content hr {
+    max-width: 4rem;
+    margin: 4rem auto;
 }
 
 .legal-back a {

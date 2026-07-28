@@ -139,6 +139,58 @@ the double opt-in emails or to generate a new form URL.
 
 ---
 
+## Double opt-in: email and confirmation page
+
+Two pieces belong together and both have to be wired up inside Brevo.
+
+### 1. The confirmation email
+
+`email/doi-confirmation.html` is the double opt-in email, bilingual
+(German first, English below), built as a table layout with inline styles
+so it survives Outlook.
+
+Set it up in Brevo:
+
+1. **Marketing → Templates → Create Template → Email template**
+2. Subject line, sender, preview text. Then **Show advanced settings** and
+   enter `optin` in the **Tag** field — this is how Brevo recognises it as
+   a double opt-in template.
+3. Choose the **paste your code / HTML** option and paste the file contents.
+4. **Marketing → Forms →** your form **→ Settings → Double confirmation
+   email** and pick this template.
+
+The button links to `{{ doubleoptin }}`. **Do not change that placeholder** —
+Brevo swaps it for the recipient's personal confirmation link at send time.
+Without it, nobody can confirm.
+
+The email deliberately contains no promotional content: under GDPR the
+confirmation email may only serve to confirm consent. It also repeats the
+consent statement, which is what Brevo recommends so the wording is on
+record in the transactional logs.
+
+### 2. The confirmation page
+
+`confirmed.html` is what the subscriber sees after clicking the button.
+Set it in Brevo under the form's settings as the redirect URL after
+confirmation:
+
+```
+https://<your-domain>/confirmed.html
+```
+
+Unlike the other pages it shows **both languages at once** and has no
+language switcher. Visitors arrive from an email link, often in a
+different browser where no language preference is stored — guessing wrong
+on a thank-you page is worse than simply showing both. Its text lives in
+`content/confirmed.md` (a single file, not one per language) and it is
+`noindex`, since a confirmation page has no business in search results.
+
+> The footer links in the email currently point at `mountaincargo.com`.
+> While the site still runs on `kapitainnemo.github.io`, update them —
+> dead links in a confirmation email cost trust and deliverability.
+
+---
+
 ## Local development
 
 The content is fetched at runtime, so opening `index.html` directly from

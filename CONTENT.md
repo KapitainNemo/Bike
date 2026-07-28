@@ -19,9 +19,18 @@ any coding knowledge to change them, and you can't break the site by doing so.*
 | `content/imprint.de.md` | Impressum (Deutsch) |
 | `content/privacy.en.md` | Privacy policy (Englisch) |
 | `content/privacy.de.md` | Datenschutzerklärung (Deutsch) |
+| `content/confirmed.md` | Seite nach der Newsletter-Bestätigung — **eine Datei, beide Sprachen** |
 
 Ändere immer **beide Sprachversionen**, sonst passen Deutsch und Englisch
 nicht mehr zusammen.
+
+Ausnahme: `confirmed.md` enthält beide Sprachen in einer Datei, getrennt
+durch eine Linie aus drei Bindestrichen (`---`). Wer aus der Bestätigungs-
+E-Mail kommt, öffnet den Link oft in einem Browser ohne gespeicherte
+Sprachwahl — deshalb steht dort beides untereinander.
+
+Der Text der Bestätigungs-**E-Mail** liegt nicht hier, sondern direkt in
+Brevo. Die Vorlage dafür ist `email/doi-confirmation.html`.
 
 ---
 

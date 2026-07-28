@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>Bitte bestätige deine Anmeldung</title>
+
+  <!--
+    MtnCargo — Double-Opt-In-Bestätigungsmail (Brevo)
+
+    WICHTIG
+    - Der Button verlinkt auf {{ doubleoptin }}. Diesen Platzhalter NICHT
+      ändern — Brevo ersetzt ihn beim Versand durch den persönlichen
+      Bestätigungslink. Ohne ihn funktioniert die Anmeldung nicht.
+    - Im Template unter "Erweiterte Einstellungen" das Tag "optin" setzen,
+      damit Brevo es als Double-Opt-In-Template erkennt.
+    - Keine Werbung ergänzen. Diese E-Mail dient ausschliesslich der
+      Bestätigung der Einwilligung.
+    - Bewusst KEINE Google Fonts: Mailprogramme laden Webfonts ohnehin
+      kaum, und es würde die IP der Empfänger an Google übertragen.
+    - Die Links im Fusszeilenbereich zeigen auf mountaincargo.com. Solange
+      die Seite noch unter kapitainnemo.github.io läuft, hier auf
+      https://kapitainnemo.github.io/Bike/ umstellen — tote Links in einer
+      Bestätigungsmail kosten Vertrauen und Zustellbarkeit.
+  -->
+
+  <style type="text/css">
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; }
+    table { margin: 0 auto; border-collapse: collapse; }
+    div, a, li, td { -webkit-text-size-adjust: none; }
+    img { border: 0; outline: none; text-decoration: none; }
+    a { color: #4a5340; }
+
+    @media only screen and (max-width: 640px) {
+      table[class=full] { width: 100% !important; }
+    }
+    @media only screen and (max-width: 479px) {
+      table[class=fullcenter] { width: 100% !important; text-align: center !important; }
+      td[class=pad] { padding-left: 22px !important; padding-right: 22px !important; }
+      td[class=h1] { font-size: 26px !important; line-height: 32px !important; }
+    }
+  </style>
+
+</head>
+
+<body style="margin:0;padding:0;background:#f5f2eb;">
+
+<!-- Preview text: shown in the inbox list, hidden in the email body. -->
+<div style="display:none;font-size:1px;color:#f5f2eb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  Ein Klick fehlt noch. &mdash; One click to go.
+</div>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f5f2eb" style="background:#f5f2eb;" role="presentation">
+<tbody>
+<tr>
+<td align="center">
+
+  <table class="full" align="center" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+
+    <tr><td height="40" width="100%"></td></tr>
+
+    <!-- Wordmark -->
+    <tr>
+      <td align="center" style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:4px;font-weight:700;color:#161616;text-transform:uppercase;">
+        MtnCargo
+      </td>
+    </tr>
+
+    <tr><td height="28" width="100%"></td></tr>
+
+    <!-- Card -->
+    <tr>
+    <td align="center">
+
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border-radius:6px;" role="presentation">
+      <tbody>
+
+        <tr><td height="48" width="100%"></td></tr>
+
+        <!-- ============ DEUTSCH ============ -->
+
+        <tr>
+          <td class="pad h1" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:30px;line-height:36px;font-weight:700;color:#161616;letter-spacing:-0.5px;">
+            Bitte bestätige deine Anmeldung
+          </td>
+        </tr>
+
+        <tr><td height="20" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#5e5e58;">
+            Mit einem Klick auf den Button bestätigst du folgende Aussage:
+            <span style="color:#161616;">„Ich möchte Informationen zum Launch von MtnCargo erhalten und akzeptiere die Datenschutzerklärung."</span>
+          </td>
+        </tr>
+
+        <tr><td height="32" width="100%"></td></tr>
+
+        <!-- Button (DE) -->
+        <tr>
+          <td align="center" style="text-align:center;padding:0 24px;">
+            <table cellspacing="0" cellpadding="0" border="0" align="center" class="fullcenter" role="presentation">
+            <tbody>
+            <tr>
+              <td height="52" bgcolor="#68745a" align="center" style="background:#68745a;border-radius:6px;padding:0 34px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;">
+                <!-- Buttontext: du-Form wäre "Ja, ich melde mich an" — passt
+                     besser zum Rest der Seite. Einfach hier ersetzen. -->
+                <a href="{{ doubleoptin }}" target="_blank" style="color:#ffffff;font-size:14px;text-decoration:none;line-height:52px;display:block;">Ja, melden Sie mich zu dieser Liste an</a>
+              </td>
+            </tr>
+            </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td height="30" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#8a8a82;">
+            Falls du diese E-Mail aus Versehen erhalten hast, kannst du sie einfach löschen. Wenn du nicht auf den obigen Bestätigungs-Link klickst, bist du nicht bei unserem Verteiler angemeldet.
+          </td>
+        </tr>
+
+        <tr><td height="44" width="100%"></td></tr>
+
+        <!-- Divider -->
+        <tr>
+          <td class="pad" style="padding:0 48px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+              <tbody><tr><td height="1" bgcolor="#e6e2d9" style="background:#e6e2d9;line-height:1px;font-size:1px;">&nbsp;</td></tr></tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td height="44" width="100%"></td></tr>
+
+        <!-- ============ ENGLISH ============ -->
+
+        <tr>
+          <td class="pad h1" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:30px;line-height:36px;font-weight:700;color:#161616;letter-spacing:-0.5px;">
+            Please confirm your subscription
+          </td>
+        </tr>
+
+        <tr><td height="20" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#5e5e58;">
+            By clicking the button you confirm the following statement:
+            <span style="color:#161616;">&ldquo;I would like to receive information about the MtnCargo launch and accept the privacy policy.&rdquo;</span>
+          </td>
+        </tr>
+
+        <tr><td height="32" width="100%"></td></tr>
+
+        <!-- Button (EN) -->
+        <tr>
+          <td align="center" style="text-align:center;padding:0 24px;">
+            <table cellspacing="0" cellpadding="0" border="0" align="center" class="fullcenter" role="presentation">
+            <tbody>
+            <tr>
+              <td height="52" bgcolor="#68745a" align="center" style="background:#68745a;border-radius:6px;padding:0 34px;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;">
+                <a href="{{ doubleoptin }}" target="_blank" style="color:#ffffff;font-size:14px;text-decoration:none;line-height:52px;display:block;">Yes, sign me up to this list</a>
+              </td>
+            </tr>
+            </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td height="30" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#8a8a82;">
+            If you received this email by mistake, simply delete it. If you don't click the confirmation link above, you are not subscribed to our list.
+          </td>
+        </tr>
+
+        <tr><td height="48" width="100%"></td></tr>
+
+      </tbody>
+      </table>
+
+    </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr><td height="28" width="100%"></td></tr>
+
+    <tr>
+      <td class="pad" align="center" style="padding:0 30px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#9a9a92;">
+        Du erhältst diese E-Mail, weil deine Adresse auf mountaincargo.com für den Newsletter eingetragen wurde.<br />
+        You are receiving this email because your address was entered for the newsletter on mountaincargo.com.
+      </td>
+    </tr>
+
+    <tr><td height="14" width="100%"></td></tr>
+
+    <tr>
+      <td align="center" style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#9a9a92;">
+        <a href="https://mountaincargo.com/imprint.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Impressum / Imprint</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://mountaincargo.com/privacy.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Datenschutz / Privacy</a>
+      </td>
+    </tr>
+
+    <tr><td height="44" width="100%"></td></tr>
+
+  </tbody>
+  </table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
