@@ -192,6 +192,35 @@
           <div class="form__entry entry_block">
             <div class="form__label-row">
 
+              <!-- The label is hidden by CSS in this design, but screen
+                   readers still read it — so it carries the friendly
+                   wording while the placeholder stays short. -->
+              <label class="entry__label" for="VORNAME" data-i18n="form_name_label">What should we call you?</label>
+
+              <div class="entry__field">
+                <!-- Optional on purpose: a waitlist should ask for as
+                     little as it can get away with. -->
+                <input class="input"
+                       type="text"
+                       id="VORNAME"
+                       name="VORNAME"
+                       maxlength="200"
+                       autocomplete="given-name"
+                       value=""
+                       placeholder="Your name (optional)"
+                       data-i18n-attr="placeholder:form_name_placeholder">
+              </div>
+
+            </div>
+
+            <label class="entry__error entry__error--primary"></label>
+          </div>
+        </div>
+
+        <div class="sib-input sib-form-block">
+          <div class="form__entry entry_block">
+            <div class="form__label-row">
+
               <label class="entry__label" for="EMAIL" data-required="*" data-i18n="form_email_label">Email</label>
 
               <div class="entry__field">

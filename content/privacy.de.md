@@ -43,7 +43,7 @@ Eine Übermittlung in die USA erfolgt auf Grundlage von [Standardvertragsklausel
 
 ## 4. Newsletter-Anmeldung
 
-Auf dieser Website kannst du dich für unseren Newsletter anmelden. Dazu erheben wir deine E-Mail-Adresse.
+Auf dieser Website kannst du dich für unseren Newsletter anmelden. Dazu erheben wir deine E-Mail-Adresse und, sofern du ihn angibst, deinen Namen. Die Angabe des Namens ist freiwillig und dient nur der persönlichen Ansprache.
 
 **Double-Opt-In:** Nach der Anmeldung erhältst du eine E-Mail mit einem Bestätigungslink. Erst nach Bestätigung nehmen wir dich in den Verteiler auf. So stellen wir sicher, dass niemand fremde Adressen einträgt.
 

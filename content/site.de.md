@@ -88,6 +88,12 @@ Sei einer der ersten Fahrer.
 ## form_text
 Die MtnCargo-Reise beginnt gerade erst. Trag dich ein und verfolge das Abenteuer.
 
+## form_name_label
+Wie sollen wir dich nennen?
+
+## form_name_placeholder
+Dein Name (optional)
+
 ## form_email_label
 E-Mail
 

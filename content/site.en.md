@@ -88,6 +88,12 @@ Be among the first riders.
 ## form_text
 The MtnCargo journey is just beginning. Join the list and follow the adventure.
 
+## form_name_label
+What should we call you?
+
+## form_name_placeholder
+Your name (optional)
+
 ## form_email_label
 Email
 

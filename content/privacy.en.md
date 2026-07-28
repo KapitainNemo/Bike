@@ -43,7 +43,7 @@ Any transfer to the USA takes place on the basis of [standard contractual clause
 
 ## 4. Newsletter signup
 
-You can sign up for our newsletter on this website. To do so, we collect your email address.
+You can sign up for our newsletter on this website. To do so, we collect your email address and, if you provide it, your name. Giving your name is optional and is only used to address you personally.
 
 **Double opt-in:** After signing up you will receive an email containing a confirmation link. We only add you to our mailing list once you have confirmed. This ensures that nobody can sign up someone else's address.
 

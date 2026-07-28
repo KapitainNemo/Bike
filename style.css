@@ -399,6 +399,11 @@ a {
     padding: 0 !important;
 }
 
+/* Gap between the name and email fields. */
+.mtn-form .sib-input + .sib-input {
+    margin-top: 12px;
+}
+
 .mtn-form input.input {
     width: 100% !important;
     height: 60px !important;
