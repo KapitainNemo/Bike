@@ -3,8 +3,9 @@
   before going live. Fill in everything in [square brackets].
 
   Note: the services described below (Brevo, Cloudflare Turnstile,
-  GitHub Pages, Google Fonts) are the services actually used on this
-  website. Please check that this is still accurate.
+  GitHub Pages) are the services actually used on this website. Please
+  check that this is still accurate. The typeface is self-hosted;
+  Google Fonts is NOT used.
 -->
 
 # Privacy Policy

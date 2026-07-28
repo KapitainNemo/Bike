@@ -3,8 +3,9 @@
   oder Anwalt prüfen lassen. Alle Stellen in [eckigen Klammern] ausfüllen.
 
   Wichtig: Die unten beschriebenen Dienste (Brevo, Cloudflare Turnstile,
-  GitHub Pages, Google Fonts) sind die auf dieser Website tatsächlich
-  eingesetzten Dienste. Bitte prüfen, ob das weiterhin stimmt.
+  GitHub Pages) sind die auf dieser Website tatsächlich eingesetzten
+  Dienste. Bitte prüfen, ob das weiterhin stimmt. Die Schriftart wird
+  selbst gehostet, Google Fonts wird NICHT verwendet.
 -->
 
 # Datenschutzerklärung
