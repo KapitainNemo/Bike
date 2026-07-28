@@ -28,6 +28,9 @@ gravel, bikepacking, off-road exploration and one-night trips.
 │   └── privacy.de.md
 │
 ├── logo.svg
+├── fonts/
+│   ├── manrope-variable.woff2   Self-hosted variable font
+│   └── OFL.txt                  Font licence
 ├── images/
 │   └── image1.jpg … image6.jpg
 │
@@ -80,6 +83,26 @@ purpose, so a typo by an editor can never break or compromise the page.
 Recommended: JPG, sRGB, 2400–3000 px wide, 250–600 KB each. Keep an eye on
 the total weight — this is a photography-led page and images dominate the
 load time.
+
+---
+
+## Fonts
+
+Manrope is **self-hosted** in `fonts/`, deliberately not loaded from Google
+Fonts — that would send every visitor's IP address to Google and require a
+corresponding entry in the privacy policy.
+
+`fonts/manrope-variable.woff2` is a single variable font file covering all
+weights from 200 to 800, subset to Latin + Latin Extended (32 KB). It was
+generated from the upstream Google Fonts source with:
+
+```
+pyftsubset "Manrope[wght].ttf" \
+  --output-file=manrope-variable.woff2 --flavor=woff2 \
+  --layout-features='*' --unicodes="<latin + latin-ext ranges>"
+```
+
+Licensed under the SIL Open Font License 1.1 (`fonts/OFL.txt`).
 
 ---
 

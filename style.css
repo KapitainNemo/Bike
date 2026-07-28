@@ -3,6 +3,22 @@
    ===================================================================== */
 
 
+/* ---------- Font ----------
+   Manrope is self-hosted so that no visitor data is sent to Google.
+   One variable file covers every weight from 200 to 800, subset to
+   Latin + Latin Extended (32 KB). Licence: SIL Open Font License 1.1,
+   see fonts/OFL.txt.
+   -------------------------------------------------------------- */
+
+@font-face {
+    font-family: "Manrope";
+    src: url("fonts/manrope-variable.woff2") format("woff2");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* ---------- Design tokens ---------- */
 
 :root {
@@ -264,7 +280,7 @@ a {
 
 .image-section {
     width: 100%;
-    height: min(80vh, 900px);
+    height: min(88vh, 990px);
     overflow: hidden;
 }
 
@@ -591,7 +607,7 @@ a {
     }
 
     .image-section {
-        height: 65vh;
+        height: 72vh;
     }
 
     .footer nav {

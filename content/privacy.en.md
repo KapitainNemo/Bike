@@ -64,13 +64,9 @@ Turnstile checks whether the input comes from a human. In doing so, technical da
 
 Further information: [https://www.cloudflare.com/privacypolicy/](https://www.cloudflare.com/privacypolicy/)
 
-## 6. Fonts (Google Fonts)
+## 6. Fonts
 
-This website loads fonts from [Google Fonts, Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland]. When you access the site, your IP address is transmitted to Google.
-
-**Legal basis:** Art. 6 (1) (f) GDPR (legitimate interest in a consistent presentation).
-
-*Note: alternatively, the fonts can be self-hosted, which removes this data transfer. [Please check which option is in use.]*
+The typeface used on this site (Manrope) is served directly from our own server and is **not** loaded from Google Fonts or any other external service. No data is transmitted to third parties in the process.
 
 ## 7. Cookies and local storage
 

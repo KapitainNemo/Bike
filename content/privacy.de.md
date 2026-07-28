@@ -64,13 +64,9 @@ Turnstile prüft, ob die Eingabe von einem Menschen stammt. Dabei werden technis
 
 Weitere Informationen: [https://www.cloudflare.com/privacypolicy/](https://www.cloudflare.com/privacypolicy/)
 
-## 6. Schriftarten (Google Fonts)
+## 6. Schriftarten
 
-Diese Website lädt Schriftarten von [Google Fonts, Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland]. Beim Aufruf der Seite wird dabei deine IP-Adresse an Google übertragen.
-
-**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung).
-
-*Hinweis: Alternativ können die Schriften lokal eingebunden werden, dann entfällt diese Datenübertragung. [Bitte prüfen, welche Variante eingesetzt wird.]*
+Die verwendete Schriftart (Manrope) wird direkt von unserem Server ausgeliefert und **nicht** von Google Fonts oder einem anderen externen Dienst geladen. Es werden dabei keine Daten an Dritte übertragen.
 
 ## 7. Cookies und lokale Speicherung
 
