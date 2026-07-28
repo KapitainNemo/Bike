@@ -1,19 +1,25 @@
-/* =====================================================
-      Main stylesheet
-===================================================== */
+/* =====================================================================
+   MtnCargo — main stylesheet
+   ===================================================================== */
 
 
-/* ---------- Variables ---------- */
+/* ---------- Design tokens ---------- */
 
 :root {
 
-    --bg: #f5f2eb;
-    --text: #161616;
-    --muted: #5e5e58;
-    --dark: #151515;
-    --light: #ffffff;
-
+    --bg:     #f5f2eb;
+    --text:   #161616;
+    --muted:  #5e5e58;
+    --dark:   #151515;
+    --light:  #ffffff;
     --accent: #68745a;
+
+    /* Corner radius of form fields and the signup button.
+       Change this one value to make the form rounder or squarer. */
+    --radius-control: 6px;
+
+    /* Corner radius of the pill-shaped hero button. */
+    --radius-pill: 100px;
 
     --max-width: 1200px;
 
@@ -24,786 +30,595 @@
 }
 
 
-
 /* ---------- Reset ---------- */
-
 
 *,
 *::before,
 *::after {
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
 
 body {
-
     margin: 0;
-
     background: var(--bg);
-
     color: var(--text);
-
     font-family: "Manrope", sans-serif;
-
     font-size: 18px;
-
     line-height: 1.6;
-
+    -webkit-font-smoothing: antialiased;
 }
-
 
 img {
-
     display: block;
-
     width: 100%;
-
     height: auto;
-
 }
-
 
 a {
-
     color: inherit;
-
     text-decoration: none;
+}
 
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 
+/* Hides the page while the translated content is being fetched,
+   so no English text flashes before the German version appears. */
+.i18n-pending body {
+    visibility: hidden;
+}
 
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background: var(--dark);
+    color: #fff;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
 
 
 /* ---------- Header ---------- */
 
-
 .site-header {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     z-index: 20;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     padding: 2rem;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,.35),
-        rgba(0,0,0,0)
-    );
-
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .35), rgba(0, 0, 0, 0));
     pointer-events: none;
-
 }
 
+.site-header--solid {
+    position: sticky;
+    background: var(--dark);
+}
 
-
-.site-header .logo {
-
+.site-header .logo,
+.site-header .lang-switch {
     pointer-events: auto;
-
-    cursor: pointer;
-
 }
 
-
+.logo {
+    cursor: pointer;
+}
 
 .logo img {
-
     width: 70px;
-
     height: 70px;
-
     object-fit: contain;
-
 }
 
 
+/* ---------- Language switch ---------- */
 
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    color: #fff;
+}
+
+.lang-btn {
+    padding: .25rem .1rem;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: uppercase;
+    opacity: .55;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+
+.lang-btn:hover {
+    opacity: .85;
+}
+
+.lang-btn.is-active {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: default;
+}
+
+.lang-sep {
+    opacity: .35;
+}
 
 
 /* ---------- Hero ---------- */
 
-
 .hero {
-
     position: relative;
-
     height: 100vh;
-
     min-height: 700px;
-
     overflow: hidden;
-
 }
-
-
 
 .hero > img {
-
     height: 100%;
-
     object-fit: cover;
-
     object-position: center;
-
 }
-
-
 
 .hero-overlay {
-
     position: absolute;
-
     inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,.25),
-            rgba(0,0,0,.55)
-        );
-
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .25), rgba(0, 0, 0, .55));
 }
-
-
 
 .hero-content {
-
     position: absolute;
-
     inset: 0;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
     padding: 2rem;
-
-    color: white;
-
+    color: #fff;
 }
-
-
 
 .hero h1 {
-
     margin: 0;
-
     font-size: clamp(3.5rem, 8vw, 7rem);
-
     line-height: .95;
-
     font-weight: 800;
-
     letter-spacing: -.05em;
-
 }
-
-
 
 .hero p {
-
     max-width: 600px;
-
     margin: 2rem auto;
-
     font-size: clamp(1rem, 2vw, 1.3rem);
-
 }
-
-
 
 .button {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 1rem 2rem;
-
-    background: white;
-
-    color: black;
-
-    border-radius: 100px;
-
+    background: #fff;
+    color: #000;
+    border-radius: var(--radius-pill);
     font-weight: 700;
-
     transition: transform .3s ease;
-
 }
-
 
 .button:hover {
-
     transform: translateY(-3px);
-
 }
 
 
-
-
-
-/* ---------- Text Sections ---------- */
-
+/* ---------- Text sections ---------- */
 
 .text-section {
-
     max-width: 760px;
-
     margin: 0 auto;
-
-    padding:
-        var(--space-xl)
-        2rem;
-
+    padding: var(--space-xl) 2rem;
     text-align: center;
-
 }
-
-
 
 .text-section h2 {
-
     margin: 0 0 2rem;
-
     font-size: clamp(2.5rem, 5vw, 5rem);
-
     line-height: 1;
-
     letter-spacing: -.04em;
-
     font-weight: 800;
-
 }
-
-
 
 .text-section p {
-
     max-width: 650px;
-
     margin: 1.5rem auto;
-
     color: var(--muted);
-
     font-size: clamp(1rem, 2vw, 1.2rem);
-
 }
 
 
-
-
-
-/* ---------- Full width Images ---------- */
-
+/* ---------- Full width images ---------- */
 
 .image-section {
-
     width: 100%;
-
     height: min(80vh, 900px);
-
     overflow: hidden;
-
 }
-
-
 
 .image-section img {
-
     height: 100%;
-
     object-fit: cover;
-
     object-position: center;
-
 }
-
-
-
 
 
 /* ---------- Quote ---------- */
 
-
 .quote-section {
-
-    padding:
-        var(--space-xl)
-        2rem;
-
-    text-align: center;
-
     max-width: 900px;
-
-    margin:auto;
-
+    margin: auto;
+    padding: var(--space-xl) 2rem;
+    text-align: center;
 }
-
-
 
 .quote-section blockquote {
-
-    margin:0 0 2rem;
-
-    font-size: clamp(2rem,5vw,4rem);
-
-    line-height:1.1;
-
-    font-weight:800;
-
-    letter-spacing:-.04em;
-
+    margin: 0 0 2rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -.04em;
 }
-
-
 
 .quote-section p {
-
-    color:var(--muted);
-
+    color: var(--muted);
 }
 
 
-
-
-
-/* ---------- Signup ---------- */
-
+/* ---------- Signup section ---------- */
 
 .signup-section {
-
-    background:var(--dark);
-
-    color:white;
-
-    padding:
-        var(--space-xl)
-        2rem;
-
+    background: var(--dark);
+    color: #fff;
+    padding: var(--space-xl) 2rem;
 }
 
+.mtn-form-title {
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    text-align: center;
+}
 
+.mtn-form-text {
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+}
 
 .mtn-consent-note {
-
     margin-top: 1.5rem;
-
-    color: rgba(255,255,255,.45);
-
+    color: rgba(255, 255, 255, .45);
     font-size: .8rem;
-
     line-height: 1.5;
-
     text-align: center;
+}
 
+.mtn-consent-note a {
+    color: rgba(255, 255, 255, .75);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 
-/* ---------- Brevo Override ---------- */
+/* ---------- Brevo form overrides ----------
+   The markup comes from Brevo and ships with its own stylesheet.
+   Everything below only changes appearance — never layout behaviour
+   that Brevo's main.js depends on (such as showing/hiding panels).
+   -------------------------------------------------------------- */
 
+.mtn-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: transparent !important;
+}
 
-.sib-form {
+.mtn-form .sib-form-container,
+.mtn-form #sib-form-container {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+}
 
-    background:transparent !important;
+.mtn-form #sib-container {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    direction: ltr;
+}
 
+/* The Brevo label is replaced by the placeholder in this design. */
+.mtn-form .entry__label,
+.mtn-form .entry__specification {
+    display: none !important;
+}
+
+.mtn-form .form__entry {
+    padding: 0 !important;
+}
+
+.mtn-form input.input {
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 24px !important;
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid transparent !important;
+    border-radius: var(--radius-control) !important;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 16px !important;
+}
+
+.mtn-form input.input::placeholder {
+    color: #888 !important;
+}
+
+.mtn-form .input--hidden {
+    display: none !important;
+}
+
+.mtn-form .sib-captcha {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.mtn-form .sib-form-block__button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    width: 100% !important;
+    height: 60px !important;
+    margin-top: .5rem;
+    padding: 0 24px !important;
+    background: var(--accent) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: var(--radius-control) !important;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.mtn-form .sib-form-block__button:hover {
+    background: #59644c !important;
+}
+
+/* Inline validation message under the field. */
+.mtn-form .entry__error {
+    margin-top: .75rem !important;
+    padding: .5rem .9rem !important;
+    border-radius: var(--radius-control) !important;
+    font-family: "Manrope", sans-serif !important;
+    font-size: .85rem !important;
+    text-align: left;
+}
+
+/* Success / error banner above the form. */
+.sib-form-message-panel {
+    max-width: 500px !important;
+    margin: 0 auto 2rem !important;
+    border-radius: var(--radius-control) !important;
+    font-family: "Manrope", sans-serif !important;
+    text-align: center !important;
 }
 
 
+/* ---------- Legal pages ---------- */
 
-#sib-container {
-
-    max-width:500px !important;
-
-    margin:auto !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
+.page-legal {
+    background: var(--bg);
 }
 
-
-
-#sib-container input {
-
-    background:white !important;
-
-    border-radius:50px !important;
-
-    border:none !important;
-
-    padding:18px 24px !important;
-
-    font-family:"Manrope",sans-serif !important;
-
+.legal {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: var(--space-md) 2rem var(--space-lg);
 }
 
-
-
-.entry__label,
-.entry__specification {
-
-    display:none !important;
-
+.legal-content h1 {
+    margin: 0 0 2.5rem;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -.04em;
+    font-weight: 800;
 }
 
-
-
-.sib-form-block p {
-
-    display:none;
-
+.legal-content h2 {
+    margin: 3rem 0 1rem;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    font-weight: 700;
 }
 
-
-
-.sib-form-block__button {
-
-    width:100% !important;
-
-    border-radius:100px !important;
-
-    background:var(--accent) !important;
-
-    text-align:center !important;
-
-    padding:18px !important;
-
-    font-family:"Manrope",sans-serif !important;
-
-    border:none !important;
-
+.legal-content h3 {
+    margin: 2rem 0 .75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
+.legal-content p,
+.legal-content li {
+    color: var(--muted);
+    font-size: 1rem;
+}
 
+.legal-content p {
+    margin: 1rem 0;
+}
 
+.legal-content ul {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+}
+
+.legal-content li {
+    margin: .4rem 0;
+}
+
+.legal-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+}
+
+.legal-content strong {
+    color: var(--text);
+}
+
+.legal-back {
+    margin-top: 4rem;
+    font-size: .95rem;
+}
+
+.legal-back a {
+    color: var(--accent);
+}
 
 
 /* ---------- Footer ---------- */
 
-
 .footer {
-
-    padding:3rem 2rem;
-
-    background:var(--dark);
-
-    color:white;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    text-align:center;
-
+    padding: 3rem 2rem;
+    background: var(--dark);
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    text-align: center;
 }
-
-
 
 .footer p {
-
-    opacity:.6;
-
+    opacity: .6;
 }
-
-
 
 .footer nav {
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:2rem;
-
-    margin-top:2rem;
-
-    font-size:.9rem;
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: .9rem;
 }
 
-
-
+.footer nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 
 
 /* ---------- Scroll animation ---------- */
 
-
 .reveal {
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:
-        opacity .9s ease,
-        transform .9s ease;
-
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .9s ease, transform .9s ease;
 }
-
-
 
 .reveal.visible {
-
-    opacity:1;
-
-    transform:none;
-
+    opacity: 1;
+    transform: none;
 }
-
-
-
 
 
 /* ---------- Mobile ---------- */
 
-
-@media(max-width:700px) {
-
+@media (max-width: 700px) {
 
     body {
-
-        font-size:16px;
-
+        font-size: 16px;
     }
-
 
     .site-header {
-
-        padding:1.5rem;
-
+        padding: 1.5rem;
     }
-
 
     .logo img {
-
-        width:55px;
-
-        height:55px;
-
+        width: 55px;
+        height: 55px;
     }
-
 
     .hero {
-
-        min-height:600px;
-
+        min-height: 600px;
     }
-
 
     .hero h1 {
-
-        font-size:3.2rem;
-
+        font-size: 3.2rem;
     }
-
 
     .image-section {
-
-        height:65vh;
-
+        height: 65vh;
     }
-
 
     .footer nav {
-
-        flex-direction:column;
-
-        gap:.75rem;
-
+        flex-direction: column;
+        gap: .75rem;
     }
 
-
-}
-
-/* =====================================
-   Brevo Form
-===================================== */
-
-
-.mtn-form {
-
-    background: transparent !important;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    width: 100%;
-
 }
 
 
-
-.mtn-form .sib-form-container,
-.mtn-form #sib-form-container {
-
-    float: none !important;
-
-    width: 100% !important;
-
-    max-width: 100% !important;
-
-    text-align: center;
-
-}
-
-
-
-.mtn-form #sib-container {
-
-    background: transparent !important;
-
-    border: none !important;
-
-    padding:0 !important;
-
-}
-
-
-
-.mtn-form .entry__label {
-
-    color:white !important;
-
-    display:none !important;
-
-}
-
-
-
-.mtn-form input {
-
-    width:100% !important;
-
-    height:60px !important;
-
-    background:white !important;
-
-    color:#111 !important;
-
-    border:none !important;
-
-    border-radius:999px !important;
-
-    padding:0 28px !important;
-
-    font-family:"Manrope",sans-serif !important;
-
-    font-size:16px !important;
-
-}
-
-
-
-.mtn-form input::placeholder {
-
-    color:#888 !important;
-
-}
-
-
-
-.mtn-form-title {
-
-    color:white;
-
-    font-size:clamp(2rem,4vw,3rem);
-
-    font-weight:800;
-
-    letter-spacing:-.04em;
-
-    line-height:1.1;
-
-    margin-bottom:1.5rem;
-
-    text-align:center;
-
-}
-
-
-
-.mtn-form-text {
-
-    color:rgba(255,255,255,.7);
-
-    margin-bottom:3rem;
-
-    text-align:center;
-
-}
-
-
-
-.mtn-form button {
-
-    width:100% !important;
-
-    height:60px !important;
-
-    border-radius:999px !important;
-
-    background:#68745a !important;
-
-    color:white !important;
-
-    font-family:"Manrope",sans-serif !important;
-
-    font-size:16px !important;
-
-    font-weight:700 !important;
-
-    border:none !important;
-
-    cursor:pointer;
-
-}
-
-
-
-.mtn-form button:hover {
-
-    opacity:.9;
-
-}
-
-
-
-.sib-form-message-panel {
-
-    max-width:500px !important;
-
-    margin:0 auto 2rem !important;
-
-    border-radius:20px !important;
-
-    text-align:center !important;
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .button,
+    .lang-btn {
+        transition: none;
+    }
 
 }
