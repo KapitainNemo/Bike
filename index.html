@@ -180,6 +180,7 @@
 
       <form id="sib-form"
             method="POST"
+            novalidate
             action="https://80e0b772.sibforms.com/serve/MUIFAFiez5dm00imqy-MMLrbim5LXsLsMfyxM32BLVCfi6xjEGAR04itklgkJgbkArJhu3HvqJxo1gnYNcNmuspZsBYbdRwB3RNAP_nDHmVgBj4rt8jPgfx92eW3bw5BERMogxqtlWNNp68-EnkrGXjI6qSLRcGv1FUmSQA6sB6LyoYuXp03TLBDlnm5smivgQ2ELubpKdHZXqz4rg=="
             data-type="subscription">
 
@@ -194,11 +195,12 @@
               <label class="entry__label" for="EMAIL" data-required="*" data-i18n="form_email_label">Email</label>
 
               <div class="entry__field">
-                <!-- type stays "text": Brevo's main.js does its own
-                     validation and native browser validation would fire
-                     first and show a competing message. -->
+                <!-- type="email" makes the browser offer the visitor's
+                     saved email addresses. The form carries "novalidate"
+                     so Brevo's own validation messages stay authoritative
+                     instead of the browser's native bubble. -->
                 <input class="input"
-                       type="text"
+                       type="email"
                        id="EMAIL"
                        name="EMAIL"
                        autocomplete="email"

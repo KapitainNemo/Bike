@@ -145,6 +145,12 @@ a {
     object-fit: contain;
 }
 
+/* logo.svg is solid black, which disappears on the dark header of the
+   legal pages. Inverting turns it white. */
+.site-header--solid .logo img {
+    filter: invert(1);
+}
+
 
 /* ---------- Language switch ---------- */
 
