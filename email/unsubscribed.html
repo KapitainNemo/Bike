@@ -7,31 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <title>Abmeldung bestätigt</title>
+  <title>Enjoy the ride | Gute Fahrt</title>
 
-  <!--
-    MtnCargo — Bestätigung der Abmeldung (Brevo)
-    Wird verschickt, nachdem sich ein Kontakt vom Newsletter abgemeldet hat.
-    In Brevo dort hinterlegen, wo du auch die Standardvorlage gefunden hast.
-
-    BETREFFZEILE (in Brevo eintragen, nicht hier):
-      Empfohlen:   Abmeldung bestätigt. / You're unsubscribed.
-      Alternativ:  Schade, dass du gehst. / Sorry to see you go.
-
-    PREVIEW-TEXT (Brevo-Feld "Vorschautext"):
-      Du erhältst keine weiteren E-Mails von uns. — No further emails from us.
-
-    WICHTIG
-    - Hier steht bewusst KEIN {{ unsubscribe }}-Link: Der Empfänger ist
-      bereits abgemeldet, ein weiterer Abmeldelink wäre sinnlos.
-    - Ebenso bewusst KEINE Werbung. Wer sich gerade abgemeldet hat, darf
-      nicht mit Marketing weiterbeworben werden. Der einzige Link ist ein
-      neutraler Hinweis für den Fall einer versehentlichen Abmeldung —
-      wenn dir selbst das zu viel ist, lösch den Absatz einfach.
-    - Die Links zeigen auf mountaincargo.com. Solange die Seite unter
-      kapitainnemo.github.io läuft, hier umstellen.
-    - Keine Google Fonts, keine externen Stylesheets, kein JavaScript.
-  -->
 
   <style type="text/css">
     * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -56,7 +33,7 @@
 
 <!-- Preview text: shown in the inbox list, hidden in the email body. -->
 <div style="display:none;font-size:1px;color:#f5f2eb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-  Du erh&auml;ltst keine weiteren E-Mails von uns. &mdash; No further emails from us.
+  The trail stays open. &mdash; Der Weg bleibt offen.
 </div>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#f5f2eb" style="background:#f5f2eb;" role="presentation">
@@ -69,8 +46,7 @@
 
     <tr><td height="40" width="100%"></td></tr>
 
-    <!-- Logo. PNG, not SVG: Gmail and Outlook do not render SVG.
-         Served at 3x for retina screens, displayed at 64px. -->
+    <!-- Logo. PNG, not SVG: Gmail and Outlook do not render SVG. -->
     <tr>
       <td align="center" style="text-align:center;">
         <img src="https://kapitainnemo.github.io/Bike/email/logo-email.png"
@@ -81,8 +57,6 @@
 
     <tr><td height="14" width="100%"></td></tr>
 
-    <!-- Wordmark. Kept as text so the brand is still visible when the
-         recipient's client blocks images, which many do by default. -->
     <tr>
       <td align="center" style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:4px;font-weight:700;color:#161616;text-transform:uppercase;">
         MtnCargo
@@ -100,12 +74,11 @@
 
         <tr><td height="52" width="100%"></td></tr>
 
-        <!-- ============ DEUTSCH ============ -->
+        <!-- ============ ENGLISH ============ -->
 
         <tr>
           <td class="pad h1" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:32px;line-height:38px;font-weight:700;color:#161616;letter-spacing:-0.5px;">
-            <!-- Alternative Überschrift: "Wir bedauern, dass du uns verlässt" -->
-            Schade, dass du gehst.
+            Enjoy the ride.
           </td>
         </tr>
 
@@ -113,7 +86,7 @@
 
         <tr>
           <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
-            Deine Abmeldung ist bestätigt. Du erhältst keine weiteren E-Mails von uns.
+            You&rsquo;re unsubscribed. No more emails from us &mdash; your inbox is yours again.
           </td>
         </tr>
 
@@ -121,9 +94,16 @@
 
         <tr>
           <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
-            Falls das ein Versehen war, kannst du dich jederzeit
-            <a href="https://mountaincargo.com/#join" target="_blank" style="color:#68745a;text-decoration:underline;">wieder eintragen</a>.
-            Ansonsten: Gute Fahrt.
+            The roads we&rsquo;re building this bike for aren&rsquo;t going anywhere: forest tracks, forgotten gravel, and the kind of night you only get to see from a sleeping bag. If you ever want back on the list, the trailhead is
+            <a href="https://mountaincargo.com/#join" target="_blank" style="color:#68745a;text-decoration:underline;">right here</a>.
+          </td>
+        </tr>
+
+        <tr><td height="18" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
+            Until then: tailwinds.
           </td>
         </tr>
 
@@ -140,11 +120,11 @@
 
         <tr><td height="44" width="100%"></td></tr>
 
-        <!-- ============ ENGLISH ============ -->
+        <!-- ============ DEUTSCH ============ -->
 
         <tr>
           <td class="pad h1" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:32px;line-height:38px;font-weight:700;color:#161616;letter-spacing:-0.5px;">
-            Sorry to see you go.
+            Gute Fahrt.
           </td>
         </tr>
 
@@ -152,7 +132,7 @@
 
         <tr>
           <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
-            Your unsubscribe is confirmed. You won&rsquo;t receive any further emails from us.
+            Du bist abgemeldet. Keine weiteren E-Mails von uns &mdash; dein Postfach gehört wieder dir.
           </td>
         </tr>
 
@@ -160,9 +140,16 @@
 
         <tr>
           <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
-            If that was a mistake, you can
-            <a href="https://mountaincargo.com/#join" target="_blank" style="color:#68745a;text-decoration:underline;">sign up again</a>
-            at any time. Otherwise: enjoy the ride.
+            Die Wege, für die wir dieses Rad bauen, bleiben trotzdem da: Waldpisten, vergessener Schotter und die Art von Nacht, die man nur aus dem Schlafsack sieht. Falls du doch wieder dabei sein willst, geht es
+            <a href="https://mountaincargo.com/#join" target="_blank" style="color:#68745a;text-decoration:underline;">hier zurück auf die Liste</a>.
+          </td>
+        </tr>
+
+        <tr><td height="18" width="100%"></td></tr>
+
+        <tr>
+          <td class="pad" align="center" style="padding:0 48px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#5e5e58;">
+            Bis dahin: Rückenwind.
           </td>
         </tr>
 
@@ -179,8 +166,8 @@
 
     <tr>
       <td class="pad" align="center" style="padding:0 30px;text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#9a9a92;">
-        Dies ist die letzte E-Mail, die du von uns erhältst.<br />
-        This is the last email you will receive from us.
+        This is the last email you will receive from us.<br />
+        Dies ist die letzte E-Mail, die du von uns erhältst.
       </td>
     </tr>
 
@@ -188,9 +175,9 @@
 
     <tr>
       <td align="center" style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#9a9a92;">
-        <a href="https://mountaincargo.com/imprint.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Impressum / Imprint</a>
+        <a href="https://mountaincargo.com/imprint.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Imprint / Impressum</a>
         &nbsp;&middot;&nbsp;
-        <a href="https://mountaincargo.com/privacy.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Datenschutz / Privacy</a>
+        <a href="https://mountaincargo.com/privacy.html" target="_blank" style="color:#9a9a92;text-decoration:underline;">Privacy / Datenschutz</a>
       </td>
     </tr>
 

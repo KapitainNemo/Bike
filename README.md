@@ -172,7 +172,10 @@ record in the transactional logs.
 
 `email/welcome-confirmed.html` goes out *after* the contact has confirmed.
 Set it in Brevo under the form's settings as the **final confirmation
-email**. Suggested subject line: **Du bist dabei. / You're in.**
+email**. Suggested subject line: **You're in. | Du bist dabei.**
+
+All three emails lead with English and repeat in German below, matching the
+site's English default.
 
 It must keep the `{{ unsubscribe }}` link — Brevo replaces it with the
 recipient's personal unsubscribe URL, and without it the email is legally
@@ -181,7 +184,7 @@ exposed.
 ### 3. The unsubscribe confirmation
 
 `email/unsubscribed.html` confirms that someone has been removed from the
-list. Suggested subject line: **Abmeldung bestätigt. / You're unsubscribed.**
+list. Suggested subject line: **Enjoy the ride. | Gute Fahrt.**
 
 Two deliberate omissions: it has **no `{{ unsubscribe }}` link**, because
 the recipient is already unsubscribed, and it carries **no promotional
