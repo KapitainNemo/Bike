@@ -178,6 +178,17 @@ It must keep the `{{ unsubscribe }}` link — Brevo replaces it with the
 recipient's personal unsubscribe URL, and without it the email is legally
 exposed.
 
+### 3. The unsubscribe confirmation
+
+`email/unsubscribed.html` confirms that someone has been removed from the
+list. Suggested subject line: **Abmeldung bestätigt. / You're unsubscribed.**
+
+Two deliberate omissions: it has **no `{{ unsubscribe }}` link**, because
+the recipient is already unsubscribed, and it carries **no promotional
+content** — someone who just opted out must not be marketed to. The single
+link back to the signup exists only for accidental unsubscribes. If even
+that feels like too much, delete the paragraph.
+
 ### Logo in the emails
 
 Both templates load `email/logo-email.png` over an absolute URL, because
@@ -200,7 +211,7 @@ python3 -c "import cairosvg; cairosvg.svg2png(url='logo.svg', \
   background_color='#f5f2eb')"
 ```
 
-### 3. The confirmation page
+### 4. The confirmation page
 
 `confirmed.html` is what the subscriber sees after clicking the button.
 Set it in Brevo under the form's settings as the redirect URL after
