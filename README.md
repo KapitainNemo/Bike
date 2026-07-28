@@ -168,7 +168,39 @@ confirmation email may only serve to confirm consent. It also repeats the
 consent statement, which is what Brevo recommends so the wording is on
 record in the transactional logs.
 
-### 2. The confirmation page
+### 2. The welcome email
+
+`email/welcome-confirmed.html` goes out *after* the contact has confirmed.
+Set it in Brevo under the form's settings as the **final confirmation
+email**. Suggested subject line: **Du bist dabei. / You're in.**
+
+It must keep the `{{ unsubscribe }}` link — Brevo replaces it with the
+recipient's personal unsubscribe URL, and without it the email is legally
+exposed.
+
+### Logo in the emails
+
+Both templates load `email/logo-email.png` over an absolute URL, because
+email clients cannot resolve relative paths. It is a PNG rather than the
+site's SVG, since Gmail and Outlook do not render SVG at all. The cream
+background is baked into the file instead of using transparency, which
+older Outlook versions handle badly. It ships at 192px and is displayed at
+64px so it stays sharp on retina screens.
+
+The letterspaced **MtnCargo** wordmark below it is plain text on purpose:
+many clients block images by default, and the brand should still be
+visible when they do.
+
+To regenerate it after a logo change:
+
+```
+pip install cairosvg
+python3 -c "import cairosvg; cairosvg.svg2png(url='logo.svg', \
+  write_to='email/logo-email.png', output_width=192, output_height=192, \
+  background_color='#f5f2eb')"
+```
+
+### 3. The confirmation page
 
 `confirmed.html` is what the subscriber sees after clicking the button.
 Set it in Brevo under the form's settings as the redirect URL after
