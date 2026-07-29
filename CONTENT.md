@@ -111,6 +111,10 @@ Livegang durch echte Angaben ersetzt werden.
 | Zeilenumbruch | Zeilenumbruch |
 | Leerzeile | Absatzabstand |
 
+Der Zeilenumbruch funktioniert auch in den Formularmeldungen (`form_error`,
+`form_success`, `form_msg_*`): Einfach die Zeile umbrechen, wo der Text
+getrennt werden soll.
+
 **HTML ist bewusst nicht erlaubt.** Wenn du `<b>` oder `<script>` schreibst,
 erscheint das als normaler Text auf der Seite. Das ist eine Sicherheits-
 maßnahme: Ein Tippfehler kann die Website nicht zerstören.

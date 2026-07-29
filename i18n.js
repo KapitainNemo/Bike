@@ -138,6 +138,21 @@ window.MtnI18n = (function () {
             .replace(/\n/g, '<br>');
     }
 
+    /* Like valueToText, but keeps real line breaks. Used for Brevo's
+       validation strings: a newline survives whether Brevo injects the
+       message as text or as HTML, because the panels and error labels are
+       styled with white-space: pre-line. That makes it a safer way to
+       force a break than <br>, which only works in the HTML case. */
+    function valueToTextMultiline(text) {
+        return text
+            .replace(/\[([^\]\n]+)\]\([^)\s]+\)/g, '$1')
+            .replace(/\*\*([^*\n]+)\*\*/g, '$1')
+            .replace(/\*([^*\n]+)\*/g, '$1')
+            .replace(/[ \t]+/g, ' ')
+            .replace(/[ \t]*\n[ \t]*/g, '\n')
+            .trim();
+    }
+
     /* Value of a "## key" block as plain text (for attributes and <title>). */
     function valueToText(text) {
         return text
@@ -213,9 +228,9 @@ window.MtnI18n = (function () {
     function applyBrevoGlobals(dict) {
         var fallback = brevoFallback[lang] || brevoFallback.en;
 
-        var required = (dict && dict.form_msg_required)      ? valueToText(dict.form_msg_required)      : fallback.required;
-        var email    = (dict && dict.form_msg_email_invalid) ? valueToText(dict.form_msg_email_invalid) : fallback.email;
-        var generic  = (dict && dict.form_msg_generic)       ? valueToText(dict.form_msg_generic)       : fallback.generic;
+        var required = (dict && dict.form_msg_required)      ? valueToTextMultiline(dict.form_msg_required)      : fallback.required;
+        var email    = (dict && dict.form_msg_email_invalid) ? valueToTextMultiline(dict.form_msg_email_invalid) : fallback.email;
+        var generic  = (dict && dict.form_msg_generic)       ? valueToTextMultiline(dict.form_msg_generic)       : fallback.generic;
 
         window.LOCALE                 = lang;
         window.REQUIRED_ERROR_MESSAGE = required;

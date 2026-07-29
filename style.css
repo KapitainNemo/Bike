@@ -465,7 +465,9 @@ a {
     background: #59644c !important;
 }
 
-/* Inline validation message under the field. */
+/* Inline validation message under the field. pre-line so a line break in
+   the content file comes through, whether Brevo injects the message as
+   text or as HTML. */
 .mtn-form .entry__error {
     margin-top: .75rem !important;
     padding: .5rem .9rem !important;
@@ -473,6 +475,7 @@ a {
     font-family: "Manrope", sans-serif !important;
     font-size: .85rem !important;
     text-align: left;
+    white-space: pre-line;
 }
 
 /* Success / error banner above the form. Never set `display` here —
