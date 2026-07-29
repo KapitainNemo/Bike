@@ -107,19 +107,19 @@ JOIN THE RIDE
 By joining, you agree to receive information about the launch. You can unsubscribe at any time. See our [privacy policy](privacy.html).
 
 ## form_error
-We couldn’t save your signup. Please try again.
+Something went wrong on our end. Please try again in a moment.
 
 ## form_success
-Welcome to MtnCargo. Please confirm your email address.
+Almost there. Check your inbox to confirm.
 
 ## form_msg_required
-This field cannot be left blank.
+We still need your email address.
 
 ## form_msg_email_invalid
-Please enter a valid email address.
+That email address doesn’t look right. Please check it.
 
 ## form_msg_generic
-The information provided is invalid. Please check the field and try again.
+That doesn’t look right. Please check the field and try again.
 
 ## footer_text
 Built for gravel. Designed for detours. Made to carry more than cargo.

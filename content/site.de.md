@@ -107,19 +107,19 @@ JETZT ANMELDEN
 Mit deiner Anmeldung stimmst du dem Erhalt von Informationen zum Launch zu. Du kannst dich jederzeit abmelden. Siehe unsere [Datenschutzerklärung](privacy.html).
 
 ## form_error
-Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.
+Da ist bei uns etwas schiefgelaufen. Bitte versuch es gleich noch einmal.
 
 ## form_success
-Willkommen bei MtnCargo. Bitte bestätige deine E-Mail-Adresse.
+Fast geschafft. Bestätige deine Anmeldung im Postfach.
 
 ## form_msg_required
-Dieses Feld darf nicht leer sein.
+Deine E-Mail-Adresse fehlt noch.
 
 ## form_msg_email_invalid
-Bitte gib eine gültige E-Mail-Adresse ein.
+Diese E-Mail-Adresse sieht nicht richtig aus. Bitte prüf sie kurz.
 
 ## form_msg_generic
-Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feld und versuche es erneut.
+Das sieht nicht richtig aus. Bitte prüf das Feld und versuch es erneut.
 
 ## footer_text
 Gebaut für Gravel. Gemacht für Umwege. Entwickelt, um mehr als nur Cargo zu tragen.

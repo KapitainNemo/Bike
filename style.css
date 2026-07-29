@@ -487,6 +487,9 @@ a {
     border-radius: var(--radius-control) !important;
     font-family: "Manrope", sans-serif !important;
     text-align: center !important;
+    /* Honours real line breaks if Brevo's message field lets you enter
+       one, without collapsing ordinary wrapping. */
+    white-space: pre-line;
 }
 
 
