@@ -43,8 +43,20 @@
         <img src="logo.svg" alt="MtnCargo logo" width="70" height="70">
     </a>
 
-    <!-- Language switch: filled in by i18n.js -->
-    <div class="lang-switch" data-lang-switch aria-label="Language"></div>
+    <div class="header-right">
+
+        <!-- Language switch: filled in by i18n.js -->
+        <div class="lang-switch" data-lang-switch aria-label="Language"></div>
+
+        <!-- Discreet link to the full-bleed concept preview (xx.html).
+             Not part of the i18n language system — a static extra, on
+             purpose kept out of buildSwitch() in i18n.js so it never
+             shows on imprint/privacy/confirmed and never touches real
+             language logic. English-only preview, hence no flag/lang
+             semantics. -->
+        <a href="xx.html" class="lang-switch-extra" rel="nofollow" aria-label="Concept preview">XX</a>
+
+    </div>
 
 </header>
 

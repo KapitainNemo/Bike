@@ -131,8 +131,30 @@ a {
 }
 
 .site-header .logo,
-.site-header .lang-switch {
+.site-header .lang-switch,
+.site-header .header-right {
     pointer-events: auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Discreet extra link next to EN / DE — see index.html for context. */
+.lang-switch-extra {
+    padding: .25rem .1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    color: #fff;
+    opacity: .35;
+    transition: opacity .2s ease;
+}
+
+.lang-switch-extra:hover {
+    opacity: .7;
 }
 
 .logo {
