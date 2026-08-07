@@ -40,28 +40,6 @@
 
 <main>
 
-<!-- ============================================================
-     The real intradrive.co.uk/circular mechanism, confirmed by
-     scrolling the live page and comparing screenshots:
-
-     - The photos scroll completely normally — six plain, stacked
-       full-height <section class="panel"> images, one screen each.
-     - The text does NOT move at all. Every .text-slide lives in one
-       shared .text-stage that is "position: fixed; inset: 0" —
-       permanently centered on screen, never scrolling.
-     - Only one slide is visible at a time, via clip-path. As you
-       scroll through a panel's own height, a wipe line moves through
-       BOTH the outgoing and the incoming slide in sync with the
-       image behind it: the old slide is clipped away from the
-       bottom up, the new slide is revealed from the bottom up,
-       using the exact same progress value — so the mask hiding one
-       is the mirror of the mask revealing the other.
-
-     script.js for this page (bottom of body) computes that progress
-     per panel with getBoundingClientRect() and sets it on each pair
-     of slides. No library, no scroll-jacking of the real scrollbar.
-     ============================================================ -->
-
 <section class="panel panel--hero">
     <img src="images/image1.jpg" alt="Landscape view in nature" loading="eager" fetchpriority="high">
     <div class="panel-overlay"></div>
@@ -107,7 +85,7 @@
 
     <div class="text-slide">
         <h1 class="panel-title">Built For Detours.</h1>
-        <p class="panel-text">The most memorable rides rarely follow the route you planned. A rear rack built to hold real weight, tires wide enough for rutted double-track and a frame that stays composed once the trail turns rough mean a detour is as easy to follow as a set of directions — and usually the better story of the two.</p>
+        <p class="panel-text">The most memorable rides rarely follow the route you planned. A cargo bay built to hold real weight, tires wide enough for rutted double-track and a frame that stays composed once the trail turns rough mean a detour is as easy to follow as a set of directions — and usually the better story of the two.</p>
     </div>
 
     <div class="text-slide">
@@ -127,12 +105,6 @@
 
 </div>
 
-
-<!-- ============================================================
-     Brevo signup form — identical structure to index.html.
-     English only, hardcoded (no i18n on this preview page).
-     Do not rename ids/classes — Brevo's main.js depends on them.
-     ============================================================ -->
 
 <section id="join" class="signup-section">
 
@@ -277,10 +249,6 @@
 </footer>
 
 
-<!-- ---------- Text-slide wipe ----------
-     Drives the .text-slide clip-paths from real scroll position.
-     Photos scroll normally; only the clip-path percentages are
-     computed here — nothing is scroll-jacked. ---------- -->
 <script>
 (function () {
     'use strict';
@@ -361,9 +329,6 @@
 })();
 </script>
 
-<!-- ---------- Brevo configuration (must run before Brevo's main.js) ----------
-     Hardcoded English equivalents of i18n.js's applyBrevoGlobals(), since
-     this standalone preview page does not load i18n.js. ---------- -->
 <script>
   function handleCaptchaResponse() {
     var event = new Event('captchaChange');
