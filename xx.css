@@ -10,7 +10,7 @@
    ===================================================================== */
 
 :root {
-    --panel-accent: #b7c99b;
+    --panel-accent: #e0a458;
 }
 
 
@@ -97,14 +97,20 @@
 .text-slide .button {
     pointer-events: auto;
     margin-top: 2rem;
+    background: var(--panel-accent);
+    color: #1a1006;
 }
 
 .panel-title {
     margin: 0 0 1.5rem;
-    font-size: clamp(2.75rem, 6vw, 5.5rem);
-    line-height: 1.05;
-    font-weight: 800;
-    letter-spacing: -.04em;
+    /* Major Mono Display only ships weight 400, and it's already a wide,
+       evenly-spaced monospace face — the tight -.04em tracking and 800
+       weight tuned for Manrope would crowd or synthetically bold it. */
+    font-family: "Major Mono Display", monospace;
+    font-size: clamp(2.5rem, 6vw, 4.75rem);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: 0;
     font-style: normal;
 }
 
@@ -131,7 +137,7 @@
     }
 
     .panel-title {
-        font-size: clamp(2.25rem, 9vw, 3rem);
+        font-size: clamp(1.75rem, 8vw, 2.75rem);
     }
 
 }

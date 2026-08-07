@@ -457,9 +457,21 @@ a {
 }
 
 .mtn-form .sib-captcha {
-    display: flex;
-    justify-content: center;
     margin: 1.25rem 0;
+}
+
+/* Turnstile renders a fixed 300px-wide widget by default, narrower than
+   the input fields above it. data-size="flexible" on the widget div (in
+   index.html / xx.html) tells Cloudflare to size itself to its
+   container instead — this just makes sure that container actually
+   spans the full width. Do NOT also force a width on the iframe itself:
+   Cloudflare sizes that iframe from inside via its own script, and a
+   competing CSS width (especially with !important) breaks the
+   handshake — that's what made the widget fail to connect. */
+.mtn-form .sib-captcha .form__entry,
+.mtn-form .sib-captcha .form__label-row,
+.mtn-form .sib-captcha .cf-turnstile {
+    width: 100%;
 }
 
 .mtn-form .sib-form-block__button {
