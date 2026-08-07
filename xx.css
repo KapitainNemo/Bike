@@ -1,33 +1,16 @@
-/* =====================================================================
-   MtnCargo — "XX" concept preview
-   The intradrive.co.uk/circular effect: photos scroll completely
-   normally; the text never moves at all — it lives in one fixed
-   overlay layer and is wiped from one slide to the next via clip-path,
-   driven by scroll position (see the inline <script> near the end of
-   xx.html). Loaded on top of style.css: this file only adds what's new
-   for this page, it does not repeat resets, fonts or the signup form
-   styling — those already come from style.css.
-   ===================================================================== */
-
 :root {
     --panel-accent: #e0a458;
 }
 
 
-/* ---------- Header on this page: logo only, no language switch ---------- */
-
 .site-header {
     justify-content: flex-start;
 }
 
-/* logo.svg is solid black (see style.css) — invert it white for this
-   page, since the header always sits over a dark photo. */
 .site-header .logo img {
     filter: invert(1);
 }
 
-
-/* ---------- Panel: a plain full-height photo, scrolls normally ---------- */
 
 .panel {
     position: relative;
@@ -51,17 +34,10 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, .35), rgba(0, 0, 0, .6));
 }
 
-/* Alternated on every other panel so the sequence has some rhythm,
-   the way intradrive varies its own overlay darkness per section. */
 .panel-overlay--soft {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .45));
 }
 
-
-/* ---------- Text stage: fixed, never scrolls ----------
-   One shared layer sits on top of the whole page. Every .text-slide is
-   stacked inside it at the exact same position; script.js's clip-path
-   updates decide which one is visible, and how much of it. */
 
 .text-stage {
     position: fixed;
@@ -79,12 +55,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Anchored from a fixed top offset on purpose, not vertically
-       centered as a group — centering would shift the title up or
-       down depending on how long that slide's paragraph is, so
-       titles with the same number of lines would no longer land on
-       the same pixels. A fixed offset means every title starts at
-       an identical position, so equal line counts always align. */
     justify-content: flex-start;
     margin: auto;
     max-width: 760px;
@@ -103,9 +73,6 @@
 
 .panel-title {
     margin: 0 0 1.5rem;
-    /* Major Mono Display only ships weight 400, and it's already a wide,
-       evenly-spaced monospace face — the tight -.04em tracking and 800
-       weight tuned for Manrope would crowd or synthetically bold it. */
     font-family: "Major Mono Display", monospace;
     font-size: clamp(2.5rem, 6vw, 4.75rem);
     line-height: 1.15;
@@ -127,8 +94,6 @@
     line-height: 1.55;
 }
 
-
-/* ---------- Mobile ---------- */
 
 @media (max-width: 700px) {
 

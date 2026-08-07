@@ -13,10 +13,6 @@
 
 <link rel="preload" href="fonts/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
 
-<!-- Headline font for this preview page only — index.html stays on the
-     self-hosted Manrope, no Google request there. This is a test page,
-     so the privacy trade-off (visitor IP sent to Google) is accepted
-     here on purpose; do not carry this over to the real site. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
@@ -266,13 +262,10 @@
     }
 
     function showOutgoing(slide, progress) {
-        /* Clipped away from the bottom up as progress goes 0 -> 1. */
         slide.style.clipPath = 'inset(0 0 ' + (progress * 100) + '% 0)';
     }
 
     function showIncoming(slide, progress) {
-        /* Revealed from the bottom up as progress goes 0 -> 1 —
-           the mirror image of showOutgoing, same progress value. */
         slide.style.clipPath = 'inset(' + ((1 - progress) * 100) + '% 0 0 0)';
     }
 
@@ -291,8 +284,6 @@
         }
 
         if (prefersReducedMotion) {
-            /* No gradual wipe — just an instant swap at the halfway
-               point of each panel's own scroll range. */
             activeProgress = activeProgress < 0.5 ? 0 : 1;
         }
 
@@ -302,7 +293,6 @@
             } else if (j === activeIndex + 1) {
                 showIncoming(slides[j], activeProgress);
             } else if (j === 0 && activeIndex === -1 && window.scrollY < panels[0].offsetHeight) {
-                /* Before any scroll has happened at all. */
                 showOutgoing(slides[j], 0);
             } else {
                 hide(slides[j]);
